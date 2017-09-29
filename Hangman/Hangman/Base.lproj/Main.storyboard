@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="65.217391304347828"/>
         </scene>
-        <!--GameVC-->
+        <!--Hangman View Controller-->
         <scene sceneID="me1-LY-bz9">
             <objects>
-                <viewController id="g8U-FX-OfI" customClass="GameVC" customModule="Hangman" sceneMemberID="viewController">
+                <viewController id="g8U-FX-OfI" customClass="HangmanViewController" customModule="Hangman" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WiJ-8p-9oG"/>
                         <viewControllerLayoutGuide type="bottom" id="IKQ-NR-C1P"/>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybl-hE-feq">
-                                <rect key="frame" x="37" y="32" width="301" height="418"/>
+                                <rect key="frame" x="37" y="32" width="301" height="420.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Cg-x0-Wyw">
                                 <rect key="frame" x="53" y="498" width="270" height="126"/>
@@ -381,9 +381,9 @@
                                     <action selector="startOver:" destination="g8U-FX-OfI" eventType="touchUpInside" id="p7M-uS-5Mx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYH-5v-CuX">
-                                <rect key="frame" x="158.5" y="452" width="59.5" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYH-5v-CuX">
+                                <rect key="frame" x="160" y="454.5" width="55" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -489,6 +489,7 @@
         <image name="hangman1" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OqC-Cw-wHs"/>
         <segue reference="RDp-14-sMa"/>
     </inferredMetricsTieBreakers>
 </document>

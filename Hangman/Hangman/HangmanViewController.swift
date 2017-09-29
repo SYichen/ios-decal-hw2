@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameVC: UIViewController {
+class HangmanViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var hangmanImg: UIImageView!
@@ -84,7 +84,7 @@ class GameVC: UIViewController {
         }
         
         guessed.text = str
-        guessed.setTextSpacingBy(value: 2.0)
+        guessed.setTextSpacingBy(value: 3.0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
