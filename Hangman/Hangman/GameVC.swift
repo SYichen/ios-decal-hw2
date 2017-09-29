@@ -59,7 +59,7 @@ class GameVC: UIViewController {
             }
         }
         if (!game.can_continue(game: game)) {
-            let won = game.wrongGuesses.count < 6
+            let won = game.did_win(game: game)
             var outcome: String!
             if won {
                 outcome = "won"

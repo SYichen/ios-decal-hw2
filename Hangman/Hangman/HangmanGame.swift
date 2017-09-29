@@ -51,7 +51,7 @@ class HangmanGame {
     
     //returns true if player can continue to take turns
     func can_continue(game: HangmanGame) -> Bool {
-        if (game.wrongGuesses.count > 6) {
+        if (game.wrongGuesses.count >= 6 || !guessed.contains("_")) {
             return false
         }
         return true
@@ -60,7 +60,7 @@ class HangmanGame {
     //returns true if player won, false if player lost
     //call after can_continue returns false
     func did_win(game: HangmanGame) -> Bool {
-        if (game.wrongGuesses.count > 6) {
+        if (game.wrongGuesses.count >= 6) {
             return false
         }
         return true
