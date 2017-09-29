@@ -84,7 +84,7 @@ class HangmanViewController: UIViewController {
         }
         
         guessed.text = str
-        guessed.setTextSpacingBy(value: 3.0)
+        guessed.setTextSpacingBy(value: 4.0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,10 +93,10 @@ class HangmanViewController: UIViewController {
                 if let dest = segue.destination as? EndVC {
                     if let outcome = sender as? String {
                         if (outcome == "won") {
-                            dest.newLabel = "You won! ✨🎉"
+                            dest.newLabel = "you won! ✨🎉"
                         }
                         else {
-                            dest.newLabel = "You lost 😞"
+                            dest.newLabel = "you lost 😞"
                         }
                     }
                 }
