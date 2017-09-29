@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HangmanViewController: UIViewController {
+class EntryScreenVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

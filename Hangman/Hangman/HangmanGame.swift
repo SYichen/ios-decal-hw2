@@ -10,20 +10,20 @@ import Foundation
 
 class HangmanGame {
     
-    var wrongGuesses: Int
     var guessed: [Character]
+    var wrongGuesses: [Character]
     let word: String
     let hangmanPhrases = HangmanPhrases()
     
     init() {
-        self.wrongGuesses = 0
+        self.wrongGuesses = []
         self.word = hangmanPhrases.getRandomPhrase()
         //initializes array with underscores the length of the string
         self.guessed = Array(repeating: "_", count: strlen(self.word))
         //replace underscores with whitespace where needed
-        for i in 0...strlen(self.word) {
+        for i in 0...strlen(self.word) - 1 {
             let index = self.word.index(self.word.startIndex, offsetBy: i)
-            if (self.word[index] == " ") {
+            if (String(self.word[index]) == " ") {
                 self.guessed[i] = " "
             }
         }
@@ -33,7 +33,7 @@ class HangmanGame {
     func takeTurn(game: HangmanGame, guess: Character) -> Bool {
         //if guess is correct, change values of guessed array to reflect the correct guess
         if (game.word.characters.contains(guess)) {
-            for i in 0...strlen(game.word) {
+            for i in 0...strlen(game.word) - 1 {
                 let index = game.word.index(game.word.startIndex, offsetBy: i)
                 if (game.word[index] == guess) {
                     game.guessed[i] = guess
@@ -42,14 +42,16 @@ class HangmanGame {
             return true
         }
         else {
-            game.wrongGuesses += 1
+            if (!game.wrongGuesses.contains(guess)) {
+                game.wrongGuesses.append(guess)
+            }
             return false
         }
     }
     
     //returns true if player can continue to take turns
     func can_continue(game: HangmanGame) -> Bool {
-        if (game.wrongGuesses > 6 || !game.word.characters.contains("_")) {
+        if (game.wrongGuesses.count > 6) {
             return false
         }
         return true
@@ -58,7 +60,7 @@ class HangmanGame {
     //returns true if player won, false if player lost
     //call after can_continue returns false
     func did_win(game: HangmanGame) -> Bool {
-        if (game.wrongGuesses > 6) {
+        if (game.wrongGuesses.count > 6) {
             return false
         }
         return true

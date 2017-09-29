@@ -12,8 +12,10 @@
 		56D2EBFA03D99395D4374D58 /* Main.storyboard in Copy Storyboard */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		7C9D5E8F024131268C3F5629 /* HangmanViewControllerTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */; };
 		8410DBA840E6537C85EF0E19 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0832620AB91D0B7340776C3C /* BKAutograder.framework */; };
+		E1218DF41F751C40003253CD /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1218DF31F751C40003253CD /* GameVC.swift */; };
+		E1C7D9991F7E241400FD3770 /* EndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C7D9981F7E241400FD3770 /* EndVC.swift */; };
 		E1EFADE01F750155003E302C /* HangmanGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EFADDF1F750155003E302C /* HangmanGame.swift */; };
-		E1EFADE21F75017D003E302C /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EFADE11F75017D003E302C /* HangmanViewController.swift */; };
+		E1EFADE21F75017D003E302C /* EntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EFADE11F75017D003E302C /* EntryScreen.swift */; };
 		ECC22F431C89177600749E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22F421C89177600749E58 /* AppDelegate.swift */; };
 		ECC22F481C89177600749E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F491C89177600749E58 /* Assets.xcassets */; };
@@ -62,8 +64,10 @@
 		0832620AB91D0B7340776C3C /* BKAutograder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BKAutograder.framework; path = Autograder/Frameworks/BKAutograder.framework; sourceTree = "<group>"; };
 		0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HangmanViewControllerTestSuite.swift; sourceTree = "<group>"; };
 		2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Autograder.xcconfig; sourceTree = "<group>"; };
+		E1218DF31F751C40003253CD /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		E1C7D9981F7E241400FD3770 /* EndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndVC.swift; sourceTree = "<group>"; };
 		E1EFADDF1F750155003E302C /* HangmanGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGame.swift; sourceTree = "<group>"; };
-		E1EFADE11F75017D003E302C /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
+		E1EFADE11F75017D003E302C /* EntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryScreen.swift; sourceTree = "<group>"; };
 		ECC22F3F1C89177600749E58 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC22F421C89177600749E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC22F471C89177600749E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,7 +159,9 @@
 		ECC22F721C8917D300749E58 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E1EFADE11F75017D003E302C /* HangmanViewController.swift */,
+				E1EFADE11F75017D003E302C /* EntryScreen.swift */,
+				E1218DF31F751C40003253CD /* GameVC.swift */,
+				E1C7D9981F7E241400FD3770 /* EndVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				TargetAttributes = {
 					ECC22F3E1C89177600749E58 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8W65PB4C8B;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -297,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C7D9991F7E241400FD3770 /* EndVC.swift in Sources */,
 				ECC22F431C89177600749E58 /* AppDelegate.swift in Sources */,
 				E1EFADE01F750155003E302C /* HangmanGame.swift in Sources */,
 				ECC22F7E1C891CF800749E58 /* HangmanPhrases.swift in Sources */,
-				E1EFADE21F75017D003E302C /* HangmanViewController.swift in Sources */,
+				E1218DF41F751C40003253CD /* GameVC.swift in Sources */,
+				E1EFADE21F75017D003E302C /* EntryScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,9 +490,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8W65PB4C8B;
 				INFOPLIST_FILE = Hangman/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.Hangman;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.syichen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,9 +504,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8W65PB4C8B;
 				INFOPLIST_FILE = Hangman/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.Hangman;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.syichen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
